@@ -1,8 +1,12 @@
+import benchImage from "../../assets/bench.svg";
+import buildingImage from "../../assets/building.svg";
+import fountainImage from "../../assets/fountain.svg";
+
 export const benefits = [
   {
     id: "1",
     title: "Bench",
-    img: "/public/bench.svg",
+    img: benchImage,
     listClassName: "w-[200px] flex flex-col items-center",
     textClassName: "w-[193px] font-normal text-center leading-7 text-white",
     description: "Рядом исторические парки и скверы",
@@ -10,7 +14,7 @@ export const benefits = [
   {
     id: "2",
     title: "Building",
-    img: "/public/building.svg",
+    img: buildingImage,
     listClassName: "w-[200px] flex flex-col items-center",
     textClassName: "w-[193px] font-normal text-center leading-7 text-white",
     description: "Полностью обустроенный",
@@ -18,7 +22,7 @@ export const benefits = [
   {
     id: "3",
     title: "Fountain",
-    img: " /public/fountain.svg",
+    img: fountainImage,
     listClassName: "w-[200px] flex flex-col items-center",
     textClassName: "w-[193px] font-normal text-center leading-7 text-white",
     description: "10 фонтанов на территории",
