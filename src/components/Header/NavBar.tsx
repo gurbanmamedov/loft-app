@@ -1,4 +1,4 @@
-import React from 'react'
+
 import NavList from './NavList'
 import BurgerMenu from './BurgerMenu'
 import Logo from './Logo'

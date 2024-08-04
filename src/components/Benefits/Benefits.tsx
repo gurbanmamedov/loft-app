@@ -1,4 +1,4 @@
-import React from 'react'
+
 import BenefitsList from './BenefitsList';
 
 const Benefits = () => {

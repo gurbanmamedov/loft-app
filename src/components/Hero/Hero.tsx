@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HeroTitle from './HeroTitle'
 import styles from './Hero.module.css'
 const Hero = () => {

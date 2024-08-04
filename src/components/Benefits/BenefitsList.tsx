@@ -1,4 +1,4 @@
-import React from 'react'
+
 import BenefitsItem from './BenefitsItem'
 
 

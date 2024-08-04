@@ -1,7 +1,7 @@
 import { MapPin, Phone } from 'lucide-react';
-import React from 'react'
 
-const HeroContacts = () => {
+
+function HeroContacts() {
     return (
         <div className="flex flex-col gap-5 justify-center items-center md:flex md:flex-row  md:gap-[90px]">
             <a className="flex md:justify-between items-center text-white hover:text-[#D4C17F] transition duration-300" href="#">

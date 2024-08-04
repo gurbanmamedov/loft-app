@@ -1,4 +1,4 @@
-import React from 'react'
+
 import logoImage from '../../assets/logo.svg'
 import { FiFacebook, FiYoutube } from 'react-icons/fi'
 import { SlSocialVkontakte } from 'react-icons/sl'

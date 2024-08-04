@@ -1,5 +1,4 @@
 import { Mouse } from 'lucide-react';
-import React from 'react'
 import HeroContacts from './HeroContacts';
 
 const HeroTitle = () => {
