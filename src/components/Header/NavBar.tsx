@@ -5,7 +5,7 @@ import Logo from './Logo'
 
 const NavBar = () => {
     return (
-        <nav className="flex container justify-between items-center pt-3">
+        <nav className="px-3 flex container justify-between items-center pt-3 relative">
             <Logo />
             <BurgerMenu />
             <NavList />
