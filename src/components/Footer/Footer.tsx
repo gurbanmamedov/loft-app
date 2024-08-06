@@ -16,29 +16,34 @@ const Footer = () => {
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
                                 href="/"
+                                aria-label='О комплексе'
                             >
                                 О комплексе
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
                                 href="/"
+                                aria-label='Район'
                             >
                                 Район
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
                                 href="/"
+                                aria-label='Каталог квартир'
                             >
                                 Каталог квартир
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
+                                aria-label='Ипотека'
                                 href="/"
                             >
                                 Ипотека
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
+                                aria-label='Контакты'
                                 href="/"
                             >
                                 Контакты
@@ -48,29 +53,34 @@ const Footer = () => {
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
                                 href="/"
+                                aria-label='Поселение и переезд'
                             >
                                 Поселение и переезд
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
                                 href="/"
+                                aria-label='Сервисные услуги'
                             >
                                 Сервисные услуги
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
+                                aria-label='Экологическая устойчивость'
                                 href="/"
                             >
                                 Экологическая устойчивость
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
+                                aria-label='Инвестиционные возможности'
                                 href="/"
                             >
                                 Инвестиционные возможности
                             </a>
                             <a
                                 className=" md:hover:text-golden md:transition md:duration-300"
+                                aria-label='Программа лояльности'
                                 href="/"
                             >
                                 Программа лояльности
@@ -85,16 +95,16 @@ const Footer = () => {
                             <p className="mb-1">E-mail: <span className="text-golden">vip@lofthouse.ru</span></p>
                         </div>
                         <div className="flex gap-6 text-white">
-                            <a className=" md:hover:text-golden md:transition duration-200" href='#'>
+                            <a className=" md:hover:text-golden md:transition duration-200" aria-label='Youtube' href='#'>
                                 <FiYoutube size={35} />
                             </a>
-                            <a className=" md:hover:text-golden md:transition duration-200" href='#'>
+                            <a className=" md:hover:text-golden md:transition duration-200" aria-label='Vkontakte' href='#'>
                                 <SlSocialVkontakte size={35} />
                             </a>
-                            <a className=" md:hover:text-golden md:transition duration-200" href='#'>
+                            <a className=" md:hover:text-golden md:transition duration-200" aria-label='Facebook' href='#'>
                                 <FiFacebook size={30} />
                             </a>
-                            <a className=" md:hover:text-golden md:transition duration-200" href='#'>
+                            <a className=" md:hover:text-golden md:transition duration-200" aria-label='Instagram' href='#'>
                                 <FaInstagram size={32} />
                             </a>
                         </div>

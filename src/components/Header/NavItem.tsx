@@ -4,13 +4,14 @@ import { navLinks } from '../data'
 const NavItem = () => {
     return (
         <>
-            {navLinks.map((link) => (
-                <li key={link.name}>
+            {navLinks.map(({ name, href, }) => (
+                <li key={name}>
                     <a
                         className="text-white hover:text-golden ease-in-out duration-300 text-base"
-                        href={link.href}
+                        href={href}
+                        aria-label={name}
                     >
-                        {link.name}
+                        {name}
                     </a>
                 </li>
             ))}
