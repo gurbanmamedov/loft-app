@@ -1,6 +1,5 @@
 
-import ApartmentsContent from "./ApartmentsContent";
-import Component from "./ApartmentsContent";
+import ApartmentsContent from "./AboutContent";
 
 
 const Apartments = () => {

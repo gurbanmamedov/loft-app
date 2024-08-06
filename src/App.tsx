@@ -4,7 +4,7 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Benefits from './components/Benefits/Benefits'
 import Footer from './components/Footer/Footer'
-import Apartments from './components/Apartments/Apartments'
+import Apartments from './components/About/About'
 
 
 
