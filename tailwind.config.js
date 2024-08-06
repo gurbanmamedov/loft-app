@@ -76,6 +76,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      scrollBehavior: {
+        smooth: "scroll-smooth",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
