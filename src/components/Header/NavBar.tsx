@@ -1,16 +1,22 @@
+// NavBar.tsx
 
-import NavList from './NavList'
-import BurgerMenu from './BurgerMenu'
-import Logo from './Logo'
+import NavList from './NavList';
+import BurgerMenu from './BurgerMenu';
+import Logo from './Logo';
 
-const NavBar = () => {
+
+const NavBar: React.FC = () => {
+
     return (
-        <nav className="px-3 flex container justify-between items-center pt-3 relative">
-            <Logo />
-            <BurgerMenu />
-            <NavList />
-        </nav>
-    )
-}
+        <>
+            <nav className="px-3 flex container justify-between items-center pt-3">
+                <Logo />
+                <BurgerMenu />
+                <NavList />
+            </nav>
 
-export default NavBar
+        </>
+    );
+};
+
+export default NavBar;

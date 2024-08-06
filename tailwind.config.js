@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "",
+      padding: "1rem",
       screens: {
         sm: "375px",
         md: "768px",
@@ -19,9 +19,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        nunito: ["Nunito", "sans-serif"],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
