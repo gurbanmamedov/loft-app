@@ -3,7 +3,7 @@ import BenefitsList from './BenefitsList';
 
 const Benefits = () => {
     return (
-        <div className="container pt-[60px] md:pt-[90px] lg:pt-[130px] relative mb-10">
+        <div className="container pt-8 pb-11 md:pt-9 md:pb-12 lg:pt-10 lg:pb-14 relative">
             <div className="">
                 <BenefitsList />
             </div>

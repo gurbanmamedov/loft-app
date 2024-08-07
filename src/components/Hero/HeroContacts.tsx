@@ -3,7 +3,7 @@ import { MapPin, Phone } from 'lucide-react';
 
 function HeroContacts() {
     return (
-        <div className="flex flex-col gap-5 justify-center items-center md:flex md:flex-row  md:gap-[90px]">
+        <div className="flex flex-col gap-5 justify-center items-center md:flex-row md:gap-10 md:justify-center md:items-center md:w-full md:max-w-4xl">
             <a className="flex md:justify-between items-center text-white hover:text-[#D4C17F] transition duration-300" href="#">
                 <MapPin />
                 Наб. реки Фонтанки 10-15
@@ -13,6 +13,7 @@ function HeroContacts() {
                 <Phone /> 8 (812) 123-45-67
             </a>
         </div>
+
     );
 }
 
