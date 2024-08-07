@@ -1,26 +1,21 @@
 import { LampFloorIcon, LocateIcon, LockIcon, ParkingMeterIcon, RecycleIcon, SpadeIcon } from "lucide-react";
 import NumbersTicker from "./NumbersTicker";
 
-export default function ApartmentsContent() {
+export default function AboutContent() {
   return (
-    <div>
-      <section className="w-full py-12 md:pt-24">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col justify-center">
-            <div>
-              <h1 className="text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]">
-                Роскошная Жизнь на Высшем Уровне
-              </h1>
-              <p className="text-muted-foreground md:text-[] text-white max-w-[600px]">
-                Почувствуйте все прелести современной жизни в нашем первоклассном жилом комплексе. Расположенный в историческом районе города, наш комплекс предлагает непревзойденные удобства и образ жизни, полный комфорта и удобства.
-              </p>
-            </div>
-          </div>
+    <section>
+      <div className="w-full py-12 md:pt-24">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]">
+            Роскошная Жизнь на Высшем Уровне
+          </h1>
+          <p className="text-muted-foreground md:text-[] text-white max-w-[600px]">
+            Почувствуйте все прелести современной жизни в нашем первоклассном жилом комплексе. Расположенный в историческом районе города, наш комплекс предлагает непревзойденные удобства и образ жизни, полный комфорта и удобства.
+          </p>
         </div>
-      </section>
-
-      <section className="w-full py-10 md:py-20 lg:py-10 bg-footer ">
-        <div className="container px-4 md:px-6 mb-10">
+      </div>
+      <div className="w-full py-10 md:py-20 lg:py-10 bg-footer ">
+        <div className="mb-10">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             <div className="flex items-start gap-4">
               <div className=" rounded-md flex items-center justify-center aspect-square w-12 md:w-14">
@@ -92,7 +87,7 @@ export default function ApartmentsContent() {
           </div>
         </div>
         <NumbersTicker />
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }

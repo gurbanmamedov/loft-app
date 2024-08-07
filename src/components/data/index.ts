@@ -1,7 +1,6 @@
 import benchImage from "../../assets/bench.svg";
 import buildingImage from "../../assets/building.svg";
 import fountainImage from "../../assets/fountain.svg";
-import bicycleImage from "../../assets/bicycle.svg";
 export const benefits = [
   {
     id: "1",
@@ -27,14 +26,6 @@ export const benefits = [
     textClassName: "w-[193px] font-normal text-center leading-7 text-white",
     description: "10 фонтанов на территории",
   },
-  {
-    id: "4",
-    title: "Bicycle",
-    img: bicycleImage,
-    listClassName: "w-[200px] flex flex-col items-center",
-    textClassName: "w-[193px] font-normal text-center leading-7 text-white",
-    description: "6 км велодорожек и тропинок",
-  },
 ];
 
 export const navLinks = [
@@ -43,11 +34,11 @@ export const navLinks = [
     href: "#about",
   },
   {
-    name: "Район",
-    href: "#",
+    name: "Каталог квартир",
+    href: "#apartments",
   },
   {
-    name: "Каталог квартир",
+    name: "Район",
     href: "#",
   },
   {

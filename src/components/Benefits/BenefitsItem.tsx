@@ -6,7 +6,7 @@ const BenefitsItem = () => {
             {
                 benefits.map(({ id, textClassName, title, listClassName, description, img }) => (
                     <li key={id} className={listClassName}>
-                        <img className="lg:mb-4" src={img} alt={title} />
+                        <img className="lg:mb-4" width={80} height={80} src={img} alt={title} />
                         <p className={textClassName}>{description}</p>
                     </li>
                 ))

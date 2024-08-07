@@ -1,6 +1,3 @@
-
-
-
 import NumberTicker from '../magicui/number-ticker'
 
 const NumbersTicker = () => {

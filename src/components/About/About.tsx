@@ -1,15 +1,16 @@
 
-import ApartmentsContent from "./AboutContent";
+import AboutContent from "./AboutContent";
 
 
-const Apartments = () => {
+
+const About = () => {
     return (
-        <section id="about" className="bg-footer mb-10 pb-5">
+        <section id="about" className="bg-footer pb-5">
             <div className="container">
-                <ApartmentsContent />
+                <AboutContent />
             </div>
         </section>
     );
 }
 
-export default Apartments;
+export default About;
