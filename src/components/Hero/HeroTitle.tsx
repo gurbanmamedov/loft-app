@@ -4,7 +4,7 @@ import WordPullUp from '../magicui/word-pull-up';
 import { motion } from 'framer-motion'
 const HeroTitle = () => {
     return (
-        <div className="container flex justify-center pt-[180px]">
+        <div className="container flex justify-center pt-20 md:pt-8 lg:pt-[120px]">
             <div className="w-full max-w-[556px] flex items-center flex-col gap-5 text-center px-4">
                 <WordPullUp
                     words="Жилой комплекс в историческом центре"

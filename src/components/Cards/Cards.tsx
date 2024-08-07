@@ -14,6 +14,7 @@ const Cards = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
           <div className="rounded-lg overflow-hidden shadow-lg relative">
+            <picture></picture>
             <img
               src={apartment1}
               alt="Residence 1"

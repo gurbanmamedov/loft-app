@@ -1,7 +1,7 @@
 import { LampFloorIcon, LocateIcon, LockIcon, ParkingMeterIcon, RecycleIcon, SpadeIcon } from "lucide-react";
 import NumbersTicker from "./NumbersTicker";
 
-export default function AboutContent() {
+const AboutContent = () => {
   return (
     <section>
       <div className="w-full py-12 md:pt-24">
@@ -91,3 +91,6 @@ export default function AboutContent() {
     </section>
   )
 }
+
+
+export default AboutContent
