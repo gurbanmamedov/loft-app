@@ -20,7 +20,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        nunito: ["Nunito", "sans-serif"],
+        nunito: ["Nunito"],
       },
       colors: {
         border: "hsl(var(--border))",
