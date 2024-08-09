@@ -1,7 +1,7 @@
-import apartment1 from "../../assets/01.jpg";
-import apartment2 from "../../assets/02.jpg";
-import apartment3 from "../../assets/03.jpg";
-import apartment4 from "../../assets/04.jpg";
+import apartment1 from "../../assets/01.png";
+import apartment2 from "../../assets/02.png";
+import apartment3 from "../../assets/03.png";
+import apartment4 from "../../assets/04.png";
 
 const Cards = () => {
   return (

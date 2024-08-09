@@ -1,4 +1,4 @@
-import bgImage from '../../assets/header-bg.jpg'
+import bgImage from '../../assets/header-bg.png'
 import HeroTitle from "./HeroTitle"
 
 const Hero = () => {
