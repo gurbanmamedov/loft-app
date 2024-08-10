@@ -1,6 +1,19 @@
 import benchImage from "../../assets/bench.svg";
 import buildingImage from "../../assets/building.svg";
 import fountainImage from "../../assets/fountain.svg";
+import apartment1 from "../../assets/01.webp";
+import apartment2 from "../../assets/02.webp";
+import apartment3 from "../../assets/03.webp";
+import apartment4 from "../../assets/04.webp";
+
+
+
+export interface Apartment {
+  id: number;
+  name: string;
+  image: string;
+}
+
 export const benefits = [
   {
     id: "1",
@@ -48,5 +61,28 @@ export const navLinks = [
   {
     name: "Контакты",
     href: "/contact",
+  },
+];
+
+export const apartments: Apartment[] = [
+  {
+    id: 1,
+    name: "Пентхаус “Loft Олимп”",
+    image: apartment1,
+  },
+  {
+    id: 2,
+    name: "Апартаменты “Nice Loft”",
+    image: apartment2,
+  },
+  {
+    id: 3,
+    name: "Апартаменты “Loft Studio”",
+    image: apartment3,
+  },
+  {
+    id: 4,
+    name: "Loft квартира “Престиж”",
+    image: apartment4,
   },
 ];

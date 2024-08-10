@@ -1,4 +1,3 @@
-
 import { navLinks } from '../data'
 
 const NavItem = () => {

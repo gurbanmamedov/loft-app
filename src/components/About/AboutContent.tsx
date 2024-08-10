@@ -3,8 +3,8 @@ import NumbersTicker from "./NumbersTicker";
 
 const AboutContent = () => {
   return (
-    <section>
-      <div className="w-full py-12 md:pt-24">
+    <div>
+      <div className="w-full">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]">
             Роскошная Жизнь на Высшем Уровне
@@ -88,7 +88,7 @@ const AboutContent = () => {
         </div>
         <NumbersTicker />
       </div>
-    </section>
+    </div>
   )
 }
 
