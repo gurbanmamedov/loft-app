@@ -2,7 +2,7 @@
 import logo from '../../assets/logo.svg'
 const Logo = () => {
     return (
-        <a href='#'>
+        <a href='/'>
             <img src={logo} alt="Logo" />
         </a>
     )
