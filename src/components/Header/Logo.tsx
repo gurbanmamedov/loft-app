@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
     return (
         <a
             className={`transition-all duration-300 ${isOpen ? 'z-10' : 'z-50'}`}
-            href='/'
+            href='#'
         >
             <img src={logo} alt="Logo" />
         </a>
