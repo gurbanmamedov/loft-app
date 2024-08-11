@@ -5,6 +5,7 @@ import Benefits from "./components/Benefits/Benefits";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Cards from "./components/Cards/Cards";
+import TestimonialsSection from "./components/Testimonials/TestimonialsSection";
 
 
 
@@ -13,13 +14,13 @@ function App() {
     <>
 
 
-        <Header />
-        <Hero />
-        <Benefits />
-        <About />
-        <Cards />
-
-        <Footer />
+      <Header />
+      <Hero />
+      <Benefits />
+      <About />
+      <Cards />
+      <TestimonialsSection />
+      <Footer />
 
     </>
   );

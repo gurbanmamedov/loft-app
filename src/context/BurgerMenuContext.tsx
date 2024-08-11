@@ -1,32 +1,30 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-interface BurgerMenuContextType {
+interface BurgerMenuContextProps {
     isOpen: boolean;
     openDrawer: () => void;
     closeDrawer: () => void;
-    toggleDrawer: () => void;  
 }
 
-const BurgerMenuContext = createContext<BurgerMenuContextType | undefined>(undefined);
-
-export const BurgerMenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openDrawer = useCallback(() => setIsOpen(true), []);
-    const closeDrawer = useCallback(() => setIsOpen(false), []);
-    const toggleDrawer = useCallback(() => setIsOpen(prev => !prev), []); 
-
-    return (
-        <BurgerMenuContext.Provider value={{ isOpen, openDrawer, closeDrawer, toggleDrawer }}>
-            {children}
-        </BurgerMenuContext.Provider>
-    );
-};
+const BurgerMenuContext = createContext<BurgerMenuContextProps | undefined>(undefined);
 
 export const useBurgerMenu = () => {
     const context = useContext(BurgerMenuContext);
-    if (context === undefined) {
+    if (!context) {
         throw new Error('useBurgerMenu must be used within a BurgerMenuProvider');
     }
     return context;
+};
+
+export const BurgerMenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const openDrawer = () => setIsOpen(true);
+    const closeDrawer = () => setIsOpen(false);
+
+    return (
+        <BurgerMenuContext.Provider value={{ isOpen, openDrawer, closeDrawer }}>
+            {children}
+        </BurgerMenuContext.Provider>
+    );
 };

@@ -6,9 +6,9 @@ const AboutContent = () => {
     <div>
       <div className="w-full">
         <div className="flex flex-col justify-center">
-          <h1 className="text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]">
+          <h2 className="text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]">
             Роскошная Жизнь на Высшем Уровне
-          </h1>
+          </h2>
           <p className="text-muted-foreground md:text-[] text-white max-w-[600px]">
             Почувствуйте все прелести современной жизни в нашем первоклассном жилом комплексе. Расположенный в историческом районе города, наш комплекс предлагает непревзойденные удобства и образ жизни, полный комфорта и удобства.
           </p>
