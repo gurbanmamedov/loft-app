@@ -66,6 +66,7 @@
     @apply border-border scroll-smooth font-nunito;
   }
   body {
-    @apply bg-siteBackground text-foreground ;
+    @apply bg-siteBackground text-foreground overflow-x-hidden ;
+
   }
 }
