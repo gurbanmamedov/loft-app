@@ -7,16 +7,20 @@ import About from "./components/About/About";
 import Cards from "./components/Cards/Cards";
 
 
+
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Benefits />
-      <About />
-      <Cards/>
-      
-      <Footer />
+
+
+        <Header />
+        <Hero />
+        <Benefits />
+        <About />
+        <Cards />
+
+        <Footer />
+
     </>
   );
 }
