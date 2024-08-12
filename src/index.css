@@ -68,3 +68,16 @@
   }
 }
 
+@layer components {
+  .sectionTitle {
+    @apply text-3xl font-bold tracking-tighter md:text-5xl lg:text-5xl text-golden;
+  }
+}
+
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

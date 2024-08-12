@@ -14,7 +14,7 @@ const HeroTitle = () => {
                     animate={{ y: [0, 10, 0] }}
                     transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                 >
-                    <Mouse size={50} className="text-[#D4C17F] hidden md:block mb-[40px] lg:mb-[150px]" />
+                    <Mouse size={50} className="text-golden hidden md:block mb-[40px] lg:mb-[150px]" />
                 </motion.div>
                 <HeroContacts />
             </div>

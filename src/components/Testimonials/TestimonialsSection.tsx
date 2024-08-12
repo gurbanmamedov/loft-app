@@ -5,7 +5,12 @@ const TestimonialsSection: React.FC = () => {
     return (
         <section className=''>
             <div className='container py-12 md:pt-24'>
-                <h2 className='text-3xl mb-5 font-bold tracking-tighter md:text-5xl lg:text-5xl/none text-golden max-w-[600px]'>Отзывы наших жителей</h2>
+                <div className=' max-w-[600px]'>
+
+                    <h2 className='sectionTitle mb-5'>Отзывы наших жителей</h2>
+                    <p className='text-white'>Узнайте, что говорят наши жители о жизни в этом уникальном жилом комплексе.
+                        Здесь собраны их искренние мнения и впечатления, которые помогут вам сделать правильный выбор.</p>
+                </div>
                 <Testimonials />
             </div>
         </section>
