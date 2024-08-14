@@ -9,7 +9,7 @@ import Loader from './components/Loader/Loader';
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const location = useLocation(); // Получаем объект location
+  const location = useLocation();
 
   useEffect(() => {
     const isFirstVisit = localStorage.getItem('firstVisit') === null;

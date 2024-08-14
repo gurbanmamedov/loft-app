@@ -68,6 +68,10 @@
   }
 }
 
+* {
+  scrollbar-gutter: stable;
+}
+
 @layer components {
   .sectionTitle {
     @apply text-3xl font-bold tracking-tighter md:text-5xl lg:text-5xl text-golden;
@@ -91,14 +95,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0; 
+  background: #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d4c17f; 
-  border-radius: 6px; 
+  background: linear-gradient(180deg, #d4c17f 0%, #3e4955 100%);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3e4955; 
+  background: linear-gradient(180deg, #3e4955 0%, #d4c17f 100%);
 }
