@@ -1,27 +1,48 @@
-import "./index.css";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Benefits from "./components/Benefits/Benefits";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
-import Cards from "./components/Cards/Cards";
-import TestimonialsSection from "./components/Testimonials/TestimonialsSection";
-
-
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import SharedLayout from './components/SharedLayout';
+import TestimonialsSection from './components/Testimonials/TestimonialsSection';
+import Home from './components/pages/Home';
+import Contacts from './components/pages/Contacts';
+import Mortgage from './components/pages/Mortgage';
+import Loader from './components/Loader/Loader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation(); // Получаем объект location
+
+  useEffect(() => {
+    const isFirstVisit = localStorage.getItem('firstVisit') === null;
+
+    if (isFirstVisit) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem('firstVisit', 'false');
+      }, 1800);
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
-
-
-      <Header />
-      <Hero />
-      <Benefits />
-      <About />
-      <Cards />
-      <TestimonialsSection />
-      <Footer />
-
+      {loading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/mortgage" element={<Mortgage />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="testimonials" element={<TestimonialsSection />} />
+          </Route>
+        </Routes>
+      )}
     </>
   );
 }

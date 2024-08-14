@@ -55,16 +55,16 @@ export const navLinks = [
     href: "#apartments",
   },
   {
-    name: "Район",
-    href: "#",
+    name: "Ипотека",
+    href: "/mortgage",
   },
   {
-    name: "Ипотека",
-    href: "#",
+    name: "Отзывы",
+    href: "#testimonials",
   },
   {
     name: "Контакты",
-    href: "/contact",
+    href: "/contacts",
   },
 ];
 

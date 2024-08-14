@@ -1,11 +1,13 @@
 
 import AboutContent from "./AboutContent";
 
+interface AboutProps {
+    id?: string;
+}
 
-
-const About = () => {
+const About: React.FC<AboutProps> = ({ id }) => {
     return (
-        <section id="about" className="bg-footer  py-12 md:pt-24">
+        <section id={id} className="bg-footer  py-12 md:pt-24">
             <div className="container">
                 <AboutContent />
             </div>

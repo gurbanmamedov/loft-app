@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
 
     return (
         <a
-            href='#'
+            href='/'
         >
             <img src={logo} alt="Logo" />
         </a>
