@@ -1,4 +1,3 @@
-import React from 'react';
 import LogoSection from './LogoSection';
 import FooterLinks from './FooterLinks';
 import ContactInfo from './ContactInfo';
