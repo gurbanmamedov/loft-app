@@ -89,7 +89,7 @@
 .active-class {
   color: #d4c17f;
 }
-
+/* 
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -105,4 +105,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3e4955 0%, #d4c17f 100%);
-}
+} */
