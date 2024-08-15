@@ -11,7 +11,7 @@ const TestimonialsSection: React.FC = () => {
                     <p className='text-white'>Узнайте, что говорят наши жители о жизни в этом уникальном жилом комплексе.
                         Здесь собраны их искренние мнения и впечатления, которые помогут вам сделать правильный выбор.</p>
                 </div>
-                <Testimonials />
+            <Testimonials />
             </div>
         </section>
     )

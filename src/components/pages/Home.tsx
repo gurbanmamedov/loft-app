@@ -4,7 +4,7 @@ import About from "../About/About";
 import Benefits from "../Benefits/Benefits";
 import Cards from "../Cards/Cards";
 import Hero from "../Hero/Hero";
-import { Testimonials } from "../Testimonials/Testimonials";
+import TestimonialsSection from '../Testimonials/TestimonialsSection';
 
 const Home = () => {
     const location = useLocation();
@@ -24,7 +24,7 @@ const Home = () => {
             <Benefits />
             <About id="about" />  
             <Cards />
-            <Testimonials />
+            <TestimonialsSection />
         </div>
     );
 };
