@@ -1,4 +1,3 @@
-// ReviewModal.tsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -46,7 +45,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
             onClick={handleOutsideClick}
         >
             <motion.div
-                className="relative w-80 bg-footer border border-gray-950/[.1] rounded-xl p-4 text-white shadow-lg modal-content"
+                className="relative w-11/12 max-w-lg max-h-screen bg-footer border border-gray-950/[.1] rounded-xl p-4 text-white shadow-lg modal-content overflow-y-auto"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3 }}

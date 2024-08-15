@@ -3,7 +3,7 @@ import HeroTitle from "./HeroTitle"
 
 const Hero = () => {
     return (
-        <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center text-center ">
             <img
                 src={bgImage}
                 alt="Background"

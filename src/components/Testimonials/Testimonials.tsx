@@ -20,7 +20,7 @@ export function Testimonials() {
 
     return (
         <section id='testimonials'>
-            <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-siteBackground">
+            <div className="relative flex h-[500px] w-full flex-col items-center justify-center  rounded-lg bg-siteBackground">
                 <Marquee pauseOnHover className="animation-marquee [--duration:20s]">
                     {firstRow.map((review) => (
                         <ReviewCard key={review.username} {...review} onClick={() => handleOpenModal(review)} />

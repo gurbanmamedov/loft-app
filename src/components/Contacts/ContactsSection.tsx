@@ -1,139 +1,146 @@
-// import { useFormik } from 'formik';
-// import * as Yup from 'yup';// Adjust imports based on your setup
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { CheckIcon, LocateIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { AnimatedSubscribeButton } from "../magicui/animated-subscribe-button";
 
-// const validationSchema = Yup.object({
-//   name: Yup.string().required('Имя обязательно'),
-//   email: Yup.string().email('Неверный формат электронной почты').required('Электронная почта обязательна'),
-//   phone: Yup.string().required('Телефон обязателен'),
-//   message: Yup.string().required('Сообщение обязательно'),
-// });
+export default function ContactForm() {
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Введите ваше имя"),
+    email: Yup.string().email("Неправильный email").required("Введите ваш email"),
+    message: Yup.string().required("Введите ваше сообщение"),
+  });
 
-// const ContactsSection = () => {
-//   const formik = useFormik({
-//     initialValues: {
-//       name: '',
-//       email: '',
-//       phone: '',
-//       message: '',
-//     },
-//     validationSchema,
-//     onSubmit: (values) => {
-//       console.log(values);
-//     },
-//   });
-
-//   return (
-//     <section className="bg-[#242B33] py-12 md:py-20">
-//       <div className="container mx-auto px-4 md:px-6">
-//         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-//           <div className="space-y-4">
-//             <h2 className="text-3xl font-bold tracking-tight md:text-4xl" style={{ color: '#D4C17F' }}>Свяжитесь с Нами</h2>
-//             <p className="text-white">
-//               У вас есть вопросы или нужна помощь? Заполните форму ниже, и наша команда свяжется с вами.
-//             </p>
-//             <form onSubmit={formik.handleSubmit} className="space-y-4">
-//               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-//                 <div className="space-y-1.5">
-//                   <Label htmlFor="name">Имя</Label>
-//                   <Input
-//                     id="name"
-//                     name="name"
-//                     placeholder="Иван Иванов"
-//                     value={formik.values.name}
-//                     onChange={formik.handleChange}
-//                     onBlur={formik.handleBlur}
-//                     className={`input ${formik.touched.name && formik.errors.name ? 'input-error' : ''}`}
-//                   />
-//                   {formik.touched.name && formik.errors.name ? (
-//                     <div className="text-red-500 text-sm">{formik.errors.name}</div>
-//                   ) : null}
-//                 </div>
-//                 <div className="space-y-1.5">
-//                   <Label htmlFor="email">Электронная почта</Label>
-//                   <Input
-//                     id="email"
-//                     name="email"
-//                     type="email"
-//                     placeholder="ivan@example.com"
-//                     value={formik.values.email}
-//                     onChange={formik.handleChange}
-//                     onBlur={formik.handleBlur}
-//                     className={`input ${formik.touched.email && formik.errors.email ? 'input-error' : ''}`}
-//                   />
-//                   {formik.touched.email && formik.errors.email ? (
-//                     <div className="text-red-500 text-sm">{formik.errors.email}</div>
-//                   ) : null}
-//                 </div>
-//               </div>
-//               <div className="space-y-1.5">
-//                 <Label htmlFor="phone">Телефон</Label>
-//                 <Input
-//                   id="phone"
-//                   name="phone"
-//                   type="tel"
-//                   placeholder="(123) 456-7890"
-//                   value={formik.values.phone}
-//                   onChange={formik.handleChange}
-//                   onBlur={formik.handleBlur}
-//                   className={`input ${formik.touched.phone && formik.errors.phone ? 'input-error' : ''}`}
-//                 />
-//                 {formik.touched.phone && formik.errors.phone ? (
-//                   <div className="text-red-500 text-sm">{formik.errors.phone}</div>
-//                 ) : null}
-//               </div>
-//               <div className="space-y-1.5">
-//                 <Label htmlFor="message">Сообщение</Label>
-//                 <Textarea
-//                   id="message"
-//                   name="message"
-//                   rows={4}
-//                   placeholder="Чем мы можем вам помочь?"
-//                   value={formik.values.message}
-//                   onChange={formik.handleChange}
-//                   onBlur={formik.handleBlur}
-//                   className={`textarea ${formik.touched.message && formik.errors.message ? 'textarea-error' : ''}`}
-//                 />
-//                 {formik.touched.message && formik.errors.message ? (
-//                   <div className="text-red-500 text-sm">{formik.errors.message}</div>
-//                 ) : null}
-//               </div>
-//               <Button type="submit" className="w-full">
-//                 Отправить
-//               </Button>
-//             </form>
-//           </div>
-//           <div className="space-y-4">
-//             <div className="space-y-2">
-//               <h3 className="text-2xl font-bold" style={{ color: '#D4C17F' }}>Жилой Комплекс</h3>
-//               <p className="text-white">Наб. реки Фонтанки, 10-15</p>
-//             </div>
-//             <div className="space-y-2">
-//               <h3 className="text-2xl font-bold" style={{ color: '#D4C17F' }}>Контактная Информация</h3>
-//               <div className="space-y-1">
-//                 <p>Телефон: +7 (123) 456-78-90</p>
-//                 <p>Email: info@residentialcomplex.com</p>
-//               </div>
-//             </div>
-//             <div className="space-y-2">
-//               <h3 className="text-2xl font-bold" style={{ color: '#D4C17F' }}>Часы Работы</h3>
-//               <div className="space-y-1">
-//                 <p>Понедельник - Пятница: 9:00 - 17:00</p>
-//                 <p>Суббота - Воскресенье: Закрыто</p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ContactsSection;
-
-const ContactsSection = () => {
   return (
-    <div>ContactsSection</div>
-  )
+    <section className="bg-siteBackground py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto max-w-5xl px-4 md:px-6">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+          <div className="space-y-6">
+            <h2 className="sectionTitle ">
+              Свяжитесь с нами
+            </h2>
+            <p className="text-lg text-white">
+              Есть вопрос или хотите записаться на экскурсию? Заполните форму
+              ниже, и мы свяжемся с вами как можно скорее.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <LocateIcon className="h-6 w-6 text-golden" />
+                <p className="text-white">Наб. реки Фонтанки 10-15</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <PhoneIcon className="h-6 w-6 text-golden" />
+                <p className="text-white">8 (812) 123-45-67</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MailIcon className="h-6 w-6 text-golden" />
+                <p className="text-white">info@example.ru</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-8 bg-footer rounded-lg shadow-lg">
+            <div className="mb-6 text-center">
+              <h3 className="text-2xl font-semibold text-golden mb-4">Связаться с нами</h3>
+              <p className="text-white">
+                Заполните форму ниже, и мы свяжемся с вами как можно скорее.
+              </p>
+            </div>
+            <Formik
+              initialValues={{ name: "", email: "", message: "" }}
+              validationSchema={validationSchema}
+              onSubmit={(values, { resetForm }) => {
+                console.log(values);
+                resetForm();
+              }}
+            >
+              {({ isSubmitting, dirty }) => (
+                <Form className="space-y-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-golden"
+                      >
+                        Имя
+                      </label>
+                      <Field
+                        id="name"
+                        name="name"
+                        placeholder="Введите ваше имя"
+                        className="mt-1 block p-2 w-full focus:outline-none rounded-md  shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600"
+                      />
+                      <ErrorMessage
+                        name="name"
+                        component="div"
+                        className="mt-2 text-sm text-white"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-golden"
+                      >
+                        Email
+                      </label>
+                      <Field
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Введите ваш email"
+                        className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="mt-2 text-sm text-white"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-golden"
+                    >
+                      Сообщение
+                    </label>
+                    <Field
+                      id="message"
+                      name="message"
+                      as="textarea"
+                      rows={4}
+                      placeholder="Введите ваше сообщение"
+                      className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600 resize-none"
+                    />
+                    <ErrorMessage
+                      name="message"
+                      component="div"
+                      className="mt-2 text-sm text-white"
+                    />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <AnimatedSubscribeButton
+                      buttonColor="#D4C17F"
+                      buttonTextColor="#ffffff"
+                      subscribeStatus={false}
+                      initialText={
+                        <span className="group inline-flex items-center">
+                          Отправить
+                        </span>
+                      }
+                      changeText={
+                        <span className="group inline-flex items-center">
+                          <CheckIcon className="mr-2 h-4 w-4 block" />
+                          Отправлено
+                        </span>
+                      }
+                      disabled={isSubmitting || !dirty}
+                    />
+                  </div>
+                </Form>
+              )}
+            </Formik>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default ContactsSection
