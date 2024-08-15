@@ -12,12 +12,12 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const isFirstVisit = localStorage.getItem('firstVisit') === null;
+    const isFirstVisit = sessionStorage.getItem('firstVisit') === null;
 
     if (isFirstVisit) {
       const timer = setTimeout(() => {
         setLoading(false);
-        localStorage.setItem('firstVisit', 'false');
+        sessionStorage.setItem('firstVisit', 'false');
       }, 1800);
       return () => clearTimeout(timer);
     } else {
