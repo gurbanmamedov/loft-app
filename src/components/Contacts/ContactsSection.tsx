@@ -66,7 +66,7 @@ export default function ContactForm() {
                         id="name"
                         name="name"
                         placeholder="Введите ваше имя"
-                        className="mt-1 block p-2 w-full focus:outline-none rounded-md  shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600"
+                        className="mt-1 block p-2 w-full focus:outline-none rounded-md  shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600 placeholder:text-sm md:placeholder:text-md"
                       />
                       <ErrorMessage
                         name="name"
@@ -86,7 +86,7 @@ export default function ContactForm() {
                         name="email"
                         type="email"
                         placeholder="Введите ваш email"
-                        className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600"
+                        className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600 placeholder:text-sm md:placeholder:text-md"
                       />
                       <ErrorMessage
                         name="email"
@@ -108,7 +108,7 @@ export default function ContactForm() {
                       as="textarea"
                       rows={4}
                       placeholder="Введите ваше сообщение"
-                      className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600 resize-none"
+                      className="mt-1 block p-2 w-full rounded-md focus:outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-white bg-gray-800 border-gray-600 resize-none placeholder:text-sm md:placeholder:text-md"
                     />
                     <ErrorMessage
                       name="message"
