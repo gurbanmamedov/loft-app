@@ -8,7 +8,7 @@ const SharedLayout = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 1000) {
+            if (window.scrollY > 300) {
                 setShowScrollTopButton(true);
             } else {
                 setShowScrollTopButton(false);
