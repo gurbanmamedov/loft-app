@@ -31,7 +31,7 @@ const SharedLayout = () => {
             {showScrollTopButton && (
                 <button
                     onClick={scrollToTop}
-                    className={`fixed bottom-28 right-5 md:right-10 lg:right-16 w-16 h-16 bg-golden text-white text-xl rounded-full shadow-lg flex items-center justify-center cursor-pointer
+                    className={`fixed bottom-28 right-5 md:right-10 lg:right-16 w-16 h-16 bg-golden text-white text-3xl rounded-full shadow-lg flex items-center justify-center cursor-pointer
                     transition-opacity duration-300 ease-in-out opacity-100
                     ${showScrollTopButton ? 'animate-fade-in' : 'animate-fade-out'}`}
                 >

@@ -1,17 +1,15 @@
-import { MenuIcon } from "lucide-react";
+import React from 'react';
+import { useBurgerMenu } from '@/context/BurgerButtonContext';
+import { MenuIcon } from 'lucide-react';
 
-interface BurgerButtonProps {
-    toggleMenu: () => void;
-}
+const BurgerButton: React.FC = () => {
+    const { toggleMenu } = useBurgerMenu();
 
-const BurgerButton: React.FC<BurgerButtonProps> = ({ toggleMenu }) => {
     return (
-        <div onClick={toggleMenu} className="text-white md:hidden pr-2">
+        <div onClick={toggleMenu} className="text-white md:hidden">
             <MenuIcon />
         </div>
-
-
-    )
+    );
 };
 
 export default BurgerButton;

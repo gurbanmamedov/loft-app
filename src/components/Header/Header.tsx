@@ -1,18 +1,13 @@
 import React from 'react';
-import BurgerButton from './BurgerButton';
 import NavBar from './NavBar';
 import { useBurgerMenu } from '@/context/BurgerButtonContext';
-import { FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { FiFacebook, FiYoutube } from 'react-icons/fi';
 import { SlSocialVkontakte } from 'react-icons/sl';
+import { FaInstagram } from 'react-icons/fa';
 
 const Header: React.FC = () => {
-    const { burgerOpen, toggleMenu } = useBurgerMenu();
-
-    const handleMenuItem = () => {
-        toggleMenu();
-    };
+    const { burgerOpen } = useBurgerMenu();
 
     return (
         <header
@@ -21,31 +16,30 @@ const Header: React.FC = () => {
                 }`}
         >
             <NavBar />
-            <BurgerButton toggleMenu={toggleMenu} />
             {burgerOpen && (
                 <div className="absolute top-20 w-full h-[400px] bg-siteBackground text-golden rounded-b-xl shadow-[0_10px_15px_-3px_rgba(0,0,0,0.5)]">
                     <ul className="flex flex-col pt-16 gap-7 items-center w-full h-full">
-                        <li onClick={handleMenuItem}>
+                        <li>
                             <a href="#about" className="text-golden text-base">
                                 О комплексе
                             </a>
                         </li>
-                        <li onClick={handleMenuItem}>
+                        <li>
                             <a href="#apartments" className="text-golden text-base">
                                 Каталог квартир
                             </a>
                         </li>
-                        <li onClick={handleMenuItem}>
+                        <li>
                             <Link to="/mortgage" className="text-golden text-base">
                                 Ипотека
                             </Link>
                         </li>
-                        <li onClick={handleMenuItem}>
+                        <li>
                             <a href="#testimonials" className="text-golden text-base">
                                 Отзывы
                             </a>
                         </li>
-                        <li onClick={handleMenuItem}>
+                        <li>
                             <Link to="/contacts" className="text-golden text-base">
                                 Контакты
                             </Link>
@@ -66,5 +60,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-
